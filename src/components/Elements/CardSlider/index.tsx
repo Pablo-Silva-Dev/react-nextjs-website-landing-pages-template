@@ -1,45 +1,65 @@
-import { Container, } from './styles';
-import Image from 'next/image'
-import { TestimonialCard } from '../../Cards/TestimonialCard';
+import { CSSProperties, ReactElement } from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { ReactNode } from 'react';
+import { Container, } from './styles';
 
 interface CardSliderProps {
-    children: ReactNode;
-    showStatus?: boolean;
+    children: ReactElement[];
+    slidesToShow: number;
+    slidesToScroll: number;
+    showArrows?: boolean;
     autoPlay?: boolean;
     showIndicators?: boolean;
-    interval?: number;
+    transitionSpeed?: number;
     infiniteLoop?: boolean;
+    sliderContainerStyle?: CSSProperties;
+    sliderContainerClassName?: string;
 }
-
 
 export function CardSlider({
     children,
-    autoPlay,
-    infiniteLoop,
-    interval = 2400,
+    autoPlay = true,
+    infiniteLoop = true,
+    transitionSpeed = 400,
     showIndicators,
-    showStatus
+    showArrows,
+    sliderContainerClassName,
+    sliderContainerStyle,
+    slidesToScroll,
+    slidesToShow,
 }: CardSliderProps) {
 
+    var settings = {
+        dots: showIndicators,
+        arrows: showArrows,
+        infinite: infiniteLoop,
+        autoplay: autoPlay,
+        speed: transitionSpeed,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 720,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
+
     return (
-        <Container>
-            {/*@ts-ignore*/ }
-            <Carousel
-                showStatus={showStatus}
-                showArrows={false}
-                swipeable
-                emulateTouch
-                autoPlay={autoPlay}
-                interval={interval}
-                infiniteLoop={infiniteLoop}
-                showIndicators={showIndicators}
-            >
+        <Container
+            className={sliderContainerClassName}
+            style={sliderContainerStyle}
+        >
+            <Slider {...settings}>
                 {children}
-            </Carousel>
-        </Container >
+            </Slider>
+        </Container>
     )
 }

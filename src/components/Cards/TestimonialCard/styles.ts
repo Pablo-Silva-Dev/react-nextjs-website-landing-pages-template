@@ -7,6 +7,10 @@ export const Container = styled.div`
     background-color: rgba(17, 25, 40, 0.24);
     border: 1px solid rgba(255, 255, 255, 0.125);
   }
+   @media (max-width: 720px) {
+    width: 100%;
+    max-width: 320px;
+  }
 `;
 export const SubContainer = styled.div`
   display: flex;
@@ -21,7 +25,9 @@ export const SubContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.soft};
   @media (max-width: 720px) {
-    width: 98%;
+    width: 100%;
+    margin: auto;
+    max-width: 320px;
   }
 `;
 
