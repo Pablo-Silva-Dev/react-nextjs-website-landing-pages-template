@@ -91,4 +91,23 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  .headerScrolling {
+    position: fixed;
+    height: 40px;
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  .headerNotScrolling {
+    background-color: transparent;
+  }
+
+  .animatedTopScroll {
+    right: 24px;
+    transition: all 0.3s ease;
+  }
+  .normalTopScroll {
+    right: -80px;
+    transition: all 0.3s ease;
+  }
+
 `;
