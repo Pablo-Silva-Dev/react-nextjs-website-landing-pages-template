@@ -4,7 +4,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-
     </>
   )
 }
