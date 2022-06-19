@@ -5,11 +5,6 @@ export const Container = styled.div`
   & > div {
     position: unset !important;
   }
-  @media (max-width: 720px) {
-    width: 80%;
-    margin: 0 auto;
-  }
 `;
 
-export const NextImage = styled(Image)`
-`;
+export const NextImage = styled(Image)``;
