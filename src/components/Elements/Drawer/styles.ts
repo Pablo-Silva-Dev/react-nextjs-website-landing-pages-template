@@ -48,7 +48,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuItem = styled.a`
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.black100};
   text-transform: capitalize;
   font-weight: 700;
   font-size: ${({ theme }) => theme.sizes.large};

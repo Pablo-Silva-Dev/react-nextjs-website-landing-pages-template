@@ -20,8 +20,9 @@ export const Container = styled.button<PrimaryButtonProps>`
   height: 40px;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white100};
   font-size: ${({ theme }) => theme.sizes.medium};
+  font-weight: 700;
 
   &:disabled {
     background-color: ${({ theme }) => theme.colors.primary_light};
