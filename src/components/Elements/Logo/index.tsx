@@ -2,7 +2,6 @@ import { CSSProperties } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Container } from './styles';
 
 interface LogoProps {
     imageUrl: string;
@@ -20,20 +19,15 @@ export function Logo({
     className
 }: LogoProps) {
     return (
-        <Container
-            size={size}
-            style={style}
-            className={className}
-        >
-            <Link href={url} passHref>
-                <Image
-                    src={imageUrl}
-                    alt='logo'
-                    width='100%'
-                    height='100%'
-                />
-            </Link>
-
-        </Container>
+        <Link href={url} passHref>
+            <Image
+                src={imageUrl}
+                alt='logo'
+                width={size === 'large' ? 56 : size === 'small' ? 32 : 48}
+                height={size === 'large' ? 56 : size === 'small' ? 32 : 48}
+                className={className}
+                style={style}
+            />
+        </Link>
     )
 }

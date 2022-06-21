@@ -20,7 +20,7 @@ export const Container = styled.button<PrimaryButtonProps>`
   height: 40px;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
-  color: ${({ theme }) => theme.colors.white100};
+  color: ${({ theme }) => theme.colors.black400};
   font-size: ${({ theme }) => theme.sizes.medium};
   font-weight: 700;
 
@@ -29,6 +29,7 @@ export const Container = styled.button<PrimaryButtonProps>`
   }
   @media (max-width: 720px) {
     font-size: ${({ theme }) => theme.sizes.normal};
+    max-width: 188px;
   }
 `;
 
