@@ -11,6 +11,7 @@ interface CollapsibleInfoProps {
     titleClassName?: string;
     contentClassName?: string;
     contentContainerClassName?: string;
+    openedTitleClassName?: string;
 }
 
 export function CollapsibleInfo({
@@ -22,20 +23,24 @@ export function CollapsibleInfo({
     contentContainerStyle,
     titleClassName,
     contentClassName,
-    contentContainerClassName
+    contentContainerClassName,
+    openedTitleClassName
 }: CollapsibleInfoProps) {
     return (
         <CollapsibleTrigger
             trigger={title}
+            openedClassName={openedTitleClassName}
             transitionTime={transitionTime}
             triggerStyle={titleStyle || {
                 cursor: 'pointer'
             }}
             triggerClassName={titleClassName}
+            style={contentContainerStyle}
+            className={contentContainerClassName}
         >
             <Container
-                style={contentContainerStyle}
-                className={contentContainerClassName}
+             style={contentContainerStyle}
+             className={contentContainerClassName}
             >
                 <Text
                     style={contentStyle}

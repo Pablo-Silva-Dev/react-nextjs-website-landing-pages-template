@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import {
-  MdFavoriteBorder,
-  MdOutlineFavorite, MdShare,
-  MdShoppingCart
+    MdFavoriteBorder,
+    MdOutlineFavorite, MdShare,
+    MdShoppingCart
 } from 'react-icons/md';
 import StarRatings from 'react-star-ratings';
 import { useTheme } from 'styled-components';
 
 import { CSSProperties, ReactNode } from 'react';
 import {
-  Container, FavoriteButton, PriceOnCreditText, PriceText, PurchaseButton, RatingsContainer, ShareButton,
-  SubContainer, Title
+    Container, FavoriteButton, PriceOnCreditText, PriceText, PurchaseButton, RatingsContainer, ShareButton,
+    SubContainer, Title
 } from './styles';
 
 interface ProductCardProps {
