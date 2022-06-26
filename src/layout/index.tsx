@@ -165,6 +165,7 @@ export default function Layout({ children }: LayoutProps) {
                         githubUrl='https://github.com/pablolucio97'
                         instagramUrl='https://www.instagram.com/pablosilva.dev'
                         iconsSize='small'
+                        iconsStyle={{color: theme.colors.secondary}}
                     />
                 </FooterSecondSection>
             </Footer>

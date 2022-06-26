@@ -1,12 +1,11 @@
-import React from 'react';
 import { CSSProperties, ReactElement } from 'react';
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
-import { Container, } from './styles';
+import { Container } from './styles';
 
-interface CardSliderProps {
+interface SliderListProps {
     children: ReactElement[];
     slidesToShow: number;
     slidesToScroll: number;
@@ -19,7 +18,7 @@ interface CardSliderProps {
     sliderContainerClassName?: string;
 }
 
-export function CardSlider({
+export function SliderList({
     children,
     autoPlay = true,
     infiniteLoop = true,
@@ -30,7 +29,7 @@ export function CardSlider({
     sliderContainerStyle,
     slidesToScroll,
     slidesToShow,
-}: CardSliderProps) {
+}: SliderListProps) {
 
     var settings = {
         dots: showIndicators,

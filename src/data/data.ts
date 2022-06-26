@@ -1,6 +1,6 @@
 export const testimonials = [
   {
-    url: "/girl1.jpg",
+    url: "/image_seeds/warrant_seal1.png",
     name: "Lorena Santos",
     role: "Designer",
     ratings: 5,
@@ -8,7 +8,7 @@ export const testimonials = [
       "Os treinos são sensacionais, estou treinando em casa desde o inicio da quarentena, e estou adorando!",
   },
   {
-    url: "/girl3.jpg",
+    url: "/image_seeds/warrant_seal2.png",
     name: "Marcela de Oliveira",
     role: "Full-stack developer",
     ratings: 4,
@@ -16,61 +16,13 @@ export const testimonials = [
       "Seus treinos fizeram muita diferença no meu corpo e na minha saúde mental nessa Pandemia!",
   },
   {
-    url: "/boy1.jpg",
+    url: "/image_seeds/warrant_seal3.png",
     name: "Márcio José",
     role: "Front-end developer",
     ratings: 5,
     testimonial:
       "Os treinos são sensacionais, estou treinando em casa desde o inicio da quarentena, e estou adorando!",
-  },
-  {
-    url: "/girl2.jpg",
-    name: "Lorena Campos",
-    role: "Designer",
-    ratings: 5,
-    testimonial:
-      "Seus treinos fizeram muita diferença no meu corpo e na minha saúde mental nessa Pandemia!",
-  },
-  {
-    url: "/girl4.jpg",
-    name: "Pâmela Silva",
-    role: "Full-stack developer",
-    ratings: 4,
-    testimonial:
-      "Seus treinos fizeram muita diferença no meu corpo e na minha saúde mental nessa Pandemia!",
-  },
-  {
-    url: "/boy2.jpg",
-    name: "Marcos Xavier",
-    role: "Front-end developer",
-    ratings: 5,
-    testimonial:
-      "Os treinos são sensacionais, estou treinando em casa desde o inicio da quarentena, e estou adorando!",
-  },
-  {
-    url: "/boy3.jpg",
-    name: "Carlos Santana",
-    role: "Designer",
-    ratings: 5,
-    testimonial:
-      "Os treinos são sensacionais, estou treinando em casa desde o inicio da quarentena, e estou adorando!",
-  },
-  {
-    url: "/boy4.jpg",
-    name: "Paulo Henrique",
-    role: "Full-stack developer",
-    ratings: 4,
-    testimonial:
-      "Seus treinos fizeram muita diferença no meu corpo e na minha saúde mental nessa Pandemia!",
-  },
-  {
-    url: "/boy5.jpg",
-    name: "Bruno Simões",
-    role: "Front-end developer",
-    ratings: 5,
-    testimonial:
-      "Os treinos são sensacionais, estou treinando em casa desde o inicio da quarentena, e estou adorando!",
-  },
+  }
 ];
 
 export const faqData = [
