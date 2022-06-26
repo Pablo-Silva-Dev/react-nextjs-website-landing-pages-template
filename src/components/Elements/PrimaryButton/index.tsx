@@ -5,6 +5,7 @@ import { Container, ContentContainer } from './styles';
 
 interface PrimaryButtonProps {
     title: string;
+    ariaLabel: string;
     disabled?: boolean;
     loading?: boolean;
     onClick: () => void;
@@ -16,6 +17,7 @@ interface PrimaryButtonProps {
 
 export function PrimaryButton({
     title,
+    ariaLabel,
     onClick,
     disabled,
     loading,
@@ -34,6 +36,7 @@ export function PrimaryButton({
             style={style}
             className={className}
             size={size}
+            aria-label={ariaLabel}
         >
             
             {loading ?

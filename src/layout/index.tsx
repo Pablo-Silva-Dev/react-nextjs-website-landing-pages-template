@@ -73,6 +73,7 @@ export default function Layout({ children }: LayoutProps) {
     return (
         <Container id='top'>
             <TopScrollButton
+                ariaLabel='Voltar para o topp'
                 className={scrollTopAnimation ? 'animatedTopScroll' : 'normalTopScroll'}
                 icon={<MdArrowUpward />}
                 elementReferenceId='top'
@@ -85,7 +86,7 @@ export default function Layout({ children }: LayoutProps) {
                         toggleDrawer={handleToggleDrawer}
                         direction='top'
                         style={{
-                            backgroundColor: theme.colors.black100
+                            backgroundColor: theme.colors.primary
                         }}
                     >
                         <HeaderLink
@@ -99,7 +100,7 @@ export default function Layout({ children }: LayoutProps) {
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
-                            content='Quero queimar gordura'
+                            content='Começar agoraa'
                             url='/#purchase'
                             onClick={handleToggleDrawer}
                         />
@@ -126,11 +127,12 @@ export default function Layout({ children }: LayoutProps) {
                 </HeaderLinksContainer>
                 <HeaderAuthenticationContainer>
                     <PrimaryButton
-                        title='Quero queimar gordura'
+                        ariaLabel='Começar agora'
+                        title='Começar agoraa'
                         size='large'
                         onClick={() => { }}
                         style={{
-                            backgroundColor: theme.colors.primary
+                            backgroundColor: theme.colors.secondary
                         }}
                     />
                 </HeaderAuthenticationContainer>
@@ -138,7 +140,7 @@ export default function Layout({ children }: LayoutProps) {
             <main>{children}</main>
             <Footer
                 style={{
-                    backgroundColor: theme.colors.black100
+                    backgroundColor: theme.colors.primary
                 }}
             >
                 <FooterFirstSection>
@@ -168,7 +170,7 @@ export default function Layout({ children }: LayoutProps) {
             </Footer>
             <FooterAttach
                 style={{
-                    backgroundColor: theme.colors.black100,
+                    backgroundColor: theme.colors.primary,
                 }}
             >
                 <Divider />

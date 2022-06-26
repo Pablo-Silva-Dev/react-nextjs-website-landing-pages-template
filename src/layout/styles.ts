@@ -4,10 +4,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background-color: ${({ theme }) => theme.colors.black100};
+  background-color: ${({ theme }) => theme.colors.primary};
   & .headerScrolling {
     position: fixed;
-    background-color: ${({ theme }) => theme.colors.black100};
+    background-color: ${({ theme }) => theme.colors.primary};
     z-index: 999;
     padding: 0 12px;
     transition: all 0.8s ease;

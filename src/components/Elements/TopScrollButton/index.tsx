@@ -3,6 +3,7 @@ import { Button } from './styles'
 
 interface TopScrollButtonProps {
     elementReferenceId: string;
+    ariaLabel: string;
     icon: ReactNode;
     style?: CSSProperties;
     className?: string;
@@ -10,6 +11,7 @@ interface TopScrollButtonProps {
 
 export function TopScrollButton({
     className,
+    ariaLabel,
     style,
     elementReferenceId,
     icon
@@ -25,6 +27,7 @@ export function TopScrollButton({
             onClick={backToTop}
             style={style}
             className={className}
+            aria-label={ariaLabel}
         >
             {icon}
         </Button>
