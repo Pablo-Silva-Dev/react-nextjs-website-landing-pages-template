@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.white100};
   & .headerScrolling {
     position: fixed;
     background-color: ${({ theme }) => theme.colors.primary};
@@ -13,7 +13,7 @@ export const Container = styled.div`
     transition: all 0.8s ease;
   }
   & .headerNotScrolling {
-    background: transparent;
+    background-color: ${({ theme }) => theme.colors.primary};
     transition: all 0.8s ease;
     padding: 8px 12px;
   }

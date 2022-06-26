@@ -1,24 +1,22 @@
 import type { NextPage } from 'next'
-import { TestimonialCard } from '../components/Cards/TestimonialCard'
-import { SliderList } from '../components/Elements/SliderList'
-import { testimonials } from '../data/data'
+import Head from 'next/head'
+import { Container } from '../styles'
 
 const Home: NextPage = () => {
 
   return (
-    <SliderList
-      slidesToScroll={1}
-      slidesToShow={1}
-    >
-      {testimonials.map(testimonial => (
-        <TestimonialCard
-          key={testimonial.name}
-          personName={testimonial.name}
-          personPhotoUrl={testimonial.url}
-          testimonial={testimonial.testimonial}
-        />
-      ))}
-    </SliderList>
+    <Container>
+      <Head>
+        <title> MyPage | Home</title>
+        {/* @ts-ignore */}
+        <meta charset="UTF-8" />
+        <meta name="description" content="Landing pages de alta conversão e sites institucionais para o seu negócio." />
+        <meta name="keywords" content="pablosilvadev pablo silva psd landing pages" />
+        <meta name='author' content='Pablo Silva' />
+        <meta name="theme-color" content="#000000" />
+      </Head>
+
+    </Container>
   )
 }
 
