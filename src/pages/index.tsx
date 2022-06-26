@@ -5,7 +5,7 @@ import { Container } from '../styles'
 const Home: NextPage = () => {
 
   return (
-    <Container>
+    <Container style={{marginBottom: 120}}>
       <Head>
         <title> MyPage | Home</title>
         {/* @ts-ignore */}
@@ -15,7 +15,6 @@ const Home: NextPage = () => {
         <meta name='author' content='Pablo Silva' />
         <meta name="theme-color" content="#000000" />
       </Head>
-
     </Container>
   )
 }

@@ -1,10 +1,8 @@
-import { Container, } from './styles';
-import Image from 'next/image'
-import { TestimonialCard } from '../../Cards/TestimonialCard';
-
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
+import Image from 'next/image'
+import { Container, } from './styles';
 interface ImageSliderProps {
     images: string[];
     imgWidth: number;

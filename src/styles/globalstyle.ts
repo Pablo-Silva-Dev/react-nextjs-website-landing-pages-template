@@ -110,4 +110,58 @@ export const GlobalStyle = createGlobalStyle`
     transition: all 0.3s ease;
   }
 
+  //REACT-RESPONSIVE-CARROUSEL-CUSTOM -DOTS
+   .carousel .control-dots .dot {
+      -webkit-transition: opacity 0.25s ease-in;
+      -moz-transition: opacity 0.25s ease-in;
+      -ms-transition: opacity 0.25s ease-in;
+      -o-transition: opacity 0.25s ease-in;
+      transition: opacity 0.25s ease-in;
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+      background: ${({ theme }) => theme.colors.primary};
+      border-radius: 0%;
+      width: 16px;
+      height: 2px;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 8px; 
+  } 
+
+  //REACT-SLICK-CUSTOM -DOTS
+.slick-dots li
+ {
+    position: relative;
+    width: 12px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .slick-dots li button
+  {
+    width: 12px;
+    height: 12px;  
+    display: flex;
+    margin: 0 auto;
+    border-radius: 100%;
+    border: 0;
+    outline: none;    
+    background-color: ${({ theme }) => theme.colors.primary_light};
+    cursor: pointer;
+  }
+
+.slick-dots li.slick-active button:before
+{
+  height: 12px;
+  width: 12px;
+  background-color: ${({ theme }) => theme.colors.primary};
+  border-radius: 100%;
+}
+
+.slick-dots li button:before
+{
+  content: '';
+}
 `;
