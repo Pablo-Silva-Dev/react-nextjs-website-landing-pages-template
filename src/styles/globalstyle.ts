@@ -91,6 +91,22 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  .accordionContent{
+    padding: 14px;
+    color: ${({ theme }) => theme.colors.secondary_light};
+    font-size: ${({ theme }) => theme.sizes.medium};
+  }
+  
+  .accordionContainer{
+    color: ${({ theme }) => theme.colors.primary_light};
+    font-weight: 800;
+  }
+  .openedAccordionContainer{
+    color: ${({ theme }) => theme.colors.primary_light};
+    font-weight: 500;
+    padding: 14px 32px 0;
+  }
+
   .headerScrolling {
     position: fixed;
     height: 40px;
@@ -108,6 +124,32 @@ export const GlobalStyle = createGlobalStyle`
   .normalTopScroll {
     right: -80px;
     transition: all 0.3s ease;
+  }
+
+  .countUp{
+    font-size: ${({ theme }) => theme.sizes.xxhuge};
+    font-weight: 800;
+    text-align: center;
+    color: ${({ theme }) => theme.colors.primary};
+    @media(max-width: 1080px){
+      font-size: ${({ theme }) => theme.sizes.xhuge};
+    }
+    @media(max-width: 720px){
+      font-size: ${({ theme }) => theme.sizes.huge};
+    }
+  }
+
+  .glassEffect {
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    background-color: rgba(17, 25, 40, 0.54);
+    transition: all 1s ease;
+  }
+
+  .rgbBackground{
+    background: linear-gradient(45deg,  
+      ${({ theme }) => theme.colors.error}, 
+     ${({ theme }) => theme.colors.secondary});
   }
 
   //REACT-RESPONSIVE-CARROUSEL-CUSTOM -DOTS

@@ -100,7 +100,7 @@ export default function Layout({ children }: LayoutProps) {
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
-                            content='Começar agoraa'
+                            content='Começar agora'
                             url='/#purchase'
                             onClick={handleToggleDrawer}
                         />
@@ -128,11 +128,11 @@ export default function Layout({ children }: LayoutProps) {
                 <HeaderAuthenticationContainer>
                     <PrimaryButton
                         ariaLabel='Começar agora'
-                        title='Começar agoraa'
+                        title='Começar agora'
                         size='large'
                         onClick={() => { }}
                         style={{
-                            backgroundColor: theme.colors.secondary
+                            backgroundColor: theme.colors.secondary,
                         }}
                     />
                 </HeaderAuthenticationContainer>

@@ -32,4 +32,8 @@ export const Container = styled.div`
   & .lightText {
     color: ${({ theme }) => theme.colors.silver100};
   }
+
+  &  .rgbBackground{
+    background: linear-gradient('right-to-left', 'cyan', 'red');
+  }
 `;
