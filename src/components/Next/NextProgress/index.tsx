@@ -1,16 +1,20 @@
 import NextProgress from 'next-progress'
 import { useTheme } from 'styled-components'
 
-export default function NextProgressComponent(){
+interface NextProgressProps{
+    color: string
+}
 
-    const theme = useTheme()
+export  function NextProgressComponent({color} : NextProgressProps){
+
 
     return(
         <NextProgress
             options={{
                 showSpinner: false
             }}
-            color={theme.colors.primary_dark}
+            color={color}
+            height={4}
         />
     )
 }

@@ -109,7 +109,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .headerScrolling {
     position: fixed;
-    height: 40px;
+    height: 56px;
     background-color: ${({ theme }) => theme.colors.primary};
   }
 
@@ -151,6 +151,20 @@ export const GlobalStyle = createGlobalStyle`
       ${({ theme }) => theme.colors.error}, 
      ${({ theme }) => theme.colors.secondary});
   }
+
+    //ANIMATED VIDEO AS BACKGORUND 
+  .videoBackground{
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    opacity: .2;
+    z-index: 1;
+    @media(max-width: 720px) {
+      min-width: 100%;
+      min-height: 50%;
+    }
+  }  
 
   //REACT-RESPONSIVE-CARROUSEL-CUSTOM -DOTS
    .carousel .control-dots .dot {

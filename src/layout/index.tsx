@@ -22,6 +22,9 @@ import { TopScrollButton } from '../components/Elements/TopScrollButton';
 import { Text } from '../components/Typography/Text';
 import { Container } from './styles';
 
+import {NextProgressComponent} from '../components/Next/NextProgress'
+import { WhatsappButton } from '../components/Elements/WhatsappButton';
+
 interface LayoutProps {
     children: ReactNode;
 }
@@ -72,11 +75,19 @@ export default function Layout({ children }: LayoutProps) {
 
     return (
         <Container id='top'>
+            <NextProgressComponent
+                color={theme.colors.white100}
+            />
             <TopScrollButton
-                ariaLabel='Voltar para o topp'
+                ariaLabel='Voltar para o topo'
                 className={scrollTopAnimation ? 'animatedTopScroll' : 'normalTopScroll'}
                 icon={<MdArrowUpward />}
                 elementReferenceId='top'
+            />
+            <WhatsappButton
+                ariaLabel='Voltar para o topo'
+                className={scrollTopAnimation ? 'animatedTopScroll' : 'normalTopScroll'}
+                whatsappContact='31985187963'
             />
             <Header
                 className={headerAnimation ? 'headerScrolling' : 'headerNotScrolling'}
@@ -90,18 +101,18 @@ export default function Layout({ children }: LayoutProps) {
                         }}
                     >
                         <HeaderLink
-                            content='Sobre o treinamento'
-                            url='/#metrics'
+                            content='Home'
+                            url='/'
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
-                            content='O que dizem sobre o treinamento'
-                            url='/#testimonials'
+                            content='Equipe'
+                            url='/equipe'
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
-                            content='Começar agora'
-                            url='/#purchase'
+                            content='Contato'
+                            url='/contato'
                             onClick={handleToggleDrawer}
                         />
                     </Drawer>
@@ -117,25 +128,18 @@ export default function Layout({ children }: LayoutProps) {
                 </HeaderLogoContainer>
                 <HeaderLinksContainer>
                     <HeaderLink
-                        content='Sobre nós'
+                        content='Home'
                         url='/'
                     />
                     <HeaderLink
-                        content='Sobre o treinamento'
-                        url='/'
+                        content='Equipe'
+                        url='/equipe'
+                    />
+                    <HeaderLink
+                        content='Contato'
+                        url='/contato'
                     />
                 </HeaderLinksContainer>
-                <HeaderAuthenticationContainer>
-                    <PrimaryButton
-                        ariaLabel='Começar agora'
-                        title='Começar agora'
-                        size='large'
-                        onClick={() => { }}
-                        style={{
-                            backgroundColor: theme.colors.secondary,
-                        }}
-                    />
-                </HeaderAuthenticationContainer>
             </Header>
             <main>{children}</main>
             <Footer
@@ -145,27 +149,27 @@ export default function Layout({ children }: LayoutProps) {
             >
                 <FooterFirstSection>
                     <FooterTitle
-                        content='O treinamento'
+                        content='Sobre nós'
                     />
                     <FooterLink
-                        content='Sobre o treinamento'
-                        url='/#metrics'
+                        content='Equipe'
+                        url='/equipe'
                     />
                     <FooterLink
-                        content='O que dizem sobre o treinamento'
-                        url='/#testimonials'
+                        content='Contato'
+                        url='/contato'
                     />
                 </FooterFirstSection>
                 <FooterSecondSection>
                     <FooterTitle
-                        content='Contato'
+                        content='Redes sociais'
                     />
                     <SocialIcons
                         linkedinUrl='https://www.linkedin.com/in/pablo-silva-76b521156'
                         githubUrl='https://github.com/pablolucio97'
                         instagramUrl='https://www.instagram.com/pablosilva.dev'
                         iconsSize='small'
-                        iconsStyle={{color: theme.colors.secondary}}
+                        iconsStyle={{ color: theme.colors.white500 }}
                     />
                 </FooterSecondSection>
             </Footer>

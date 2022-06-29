@@ -6,7 +6,7 @@ interface DrawerProps {
 
 const menuAnimationVertical = keyframes`
     0%{height: 0px};
-    100%{height: 24vh};
+    100%{min-height: 24vh};
 `;
 
 const menuAnimationHorizontal = keyframes`
@@ -42,13 +42,14 @@ export const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 40px;
+  align-items: center;
   position: relative;
-  padding: 40px 24px;
+  padding: 64px 24px 24px;
+  margin: 0 auto;
 `;
 
 export const MenuItem = styled.a`
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.black100};
   text-transform: capitalize;
   font-weight: 700;
   font-size: ${({ theme }) => theme.sizes.large};
@@ -62,11 +63,11 @@ export const MenuItem = styled.a`
 
 export const CloseMenuButton = styled.button`
   display: flex;
+  position: absolute;
+  right: 40px;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
-  margin-top: -16px;
-  margin-bottom: 32px;
   background-color: ${({ theme }) => theme.colors.error};
 `;
